@@ -27,7 +27,7 @@ const Ticket = () => {
                 </Typography>
                 {/* Heading */}
                 {/* main */}
-                <section className="flex flex-wrap gap-4 mt-4 max-w-5xl">
+                <section className="flex flex-wrap gap-4 mt-4 w-full max-w-5xl px-4">
                     {getAllOrder
                         .filter((obj) => obj.userid === user?.uid && obj.status !== "pending approval" && obj.status !== "rejected")
                         .map((order, orderIndex) => (
@@ -36,7 +36,7 @@ const Ticket = () => {
                                 return (
                                     <Card
                                         key={`${orderIndex}-${itemIndex}`}
-                                        className="h-[340px] w-[200px] border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer"
+                                        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer"
                                     >
                                         <img
                                             className="h-48 md:h-64 lg:h-72 w-full object-cover"
