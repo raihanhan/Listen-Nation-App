@@ -42,13 +42,13 @@ const HomePageEventCard = () => {
         Events
       </Typography>
       {/* Main */}
-      <section className="flex flex-wrap flex-grow gap-4 mt-4 max-w-5xl">
+      <section className="flex flex-wrap gap-4 mt-4 w-full max-w-5xl px-4">
   {getAllProduct.slice(0, 8).map((item, index) => {
     const { id, title, price, eventImageUrl, start, startTime } = item;
     return (
       <Card
         key={index}
-        className="w-[200px] min-h-[340px] flex flex-col border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer"
+        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col border border-gray-300 rounded-xl overflow-hidden shadow-md cursor-pointer"
       >
         <img
           className="h-48 md:h-64 lg:h-72 w-full object-cover"
